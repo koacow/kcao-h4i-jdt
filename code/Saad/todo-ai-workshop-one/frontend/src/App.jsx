@@ -21,17 +21,6 @@ function App() {
     'learn javascript',
   ])
 
-  function delTask(index) {
-    let newTasks = [...tasks]
-    newTasks.splice(index, 1)
-    setTasks(newTasks)
-  }
-
-  // read tasks from mongodb
-  useEffect(() => {
-    
-  }, [])
-
   return (
     <>
       <Navbar />
@@ -51,7 +40,7 @@ function App() {
           </div>
           {
             tasks.map((task, index) => (
-              <Task key={index} name={task} index={index} deletefxn={delTask}/>
+              <Task key={index} name={task}/>
             ))
           }
         </section>
